@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  lw_apache:
+    container_name: lw_apache
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./html:/var/www/html
+      - ./sites:/etc/apache2/sites-available
+
